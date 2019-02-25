@@ -20,15 +20,30 @@ class TemperatureConverter {
     
     private var temperatureType: TemperatureType
     private var temperatureValue: Double
-   
     
-    public init(temperatureType: TemperatureType, value: Double) {
+    
+    public init(temperatureType: TemperatureType) {
         self.temperatureType = temperatureType
-        self.temperatureValue = value
+        self.temperatureValue = 0;
     }
    
-   
-    public var fahrenheitValue: Int {
+    func setTemperature(value: Double) {
+        temperatureValue = value
+    }
+    
+    func getFahrenheitValue() -> Int {
+        return fahrenheitValue
+    }
+    
+    func getCelsiusValue() -> Int {
+        return celsiusValue
+    }
+    
+    func getKelvinValue() -> Int {
+        return kelvinValue
+    }
+    
+    private var fahrenheitValue: Int {
         var finalValue: Int
         
         switch temperatureType {
@@ -46,7 +61,7 @@ class TemperatureConverter {
         return finalValue
     }
     
-    public var celsiusValue: Int {
+    private var celsiusValue: Int {
         var finalValue: Int
         
         switch temperatureType {
@@ -64,7 +79,7 @@ class TemperatureConverter {
         return finalValue
     }
     
-    public var kelvinValue: Int {
+    private var kelvinValue: Int {
         var finalValue: Int
         
         switch temperatureType {
@@ -87,45 +102,41 @@ class TemperatureConverter {
     private func celsiusToFarenheit(value: Double) -> Double {
         var finalValue: Double
         finalValue = ((9.0 / 5.0) * value) + 32
-        finalValue = finalValue.rounded(.up)
-        return finalValue
+        return finalValue.rounded()
     }
     
     private func celsiusToKelvin(value: Double) -> Double {
         var finalValue: Double
         finalValue = 273.15 + 32
-        finalValue = finalValue.rounded(.up)
-        return finalValue
+        return finalValue.rounded()
     }
     
     // MARK - Convert from Farenheit Functions
     private func farenheitToCelsius(value: Double) -> Double {
         var finalValue: Double = 0
         finalValue = (value - 32) * (5.0 / 9.0)
-        finalValue = finalValue.rounded(.up)
-        return finalValue
+        return finalValue.rounded()
     }
     
     private func fahrenheitToKelvin(value: Double) -> Double {
         var finalValue: Double = 0
         finalValue = ((5.0 / 9.0) * (value - 32)) + 273.15
-        finalValue = finalValue.rounded(.up)
-        return finalValue
+        
+        return finalValue.rounded()
     }
     
     // MARK - Convert from Kelvin Functions
     private func kelvinToCelsius(value: Double) -> Double {
         var finalValue: Double
         finalValue = value - 273.15
-        finalValue = finalValue.rounded(.up)
-        return finalValue
+        
+        return finalValue.rounded()
     }
     
     private func kelvinToFarenheit(value: Double) -> Double {
         var finalValue: Double
         finalValue = (value - 273.15) * (9 / 5) + 32
-        finalValue = finalValue.rounded(.up)
-        return finalValue
+        return finalValue.rounded()
     }
     
     private func convertTemperatureType(from: TemperatureType, to: TemperatureType, withValue: Double) -> Int {
