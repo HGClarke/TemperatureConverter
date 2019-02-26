@@ -140,19 +140,19 @@ class TemperatureConverterTests: XCTestCase {
         XCTAssertEqual(kelvinConverter.getFahrenheitValue(), fahrenheitExpectedValue)
         XCTAssertEqual(kelvinConverter.getKelvinValue(), Int(value.rounded()))
     }
-    /*  TODO: Fix Temperature Converter Model to handle values being
-        passed into kelvin converter being less than 0 */
-    /*func testKelvinConversion2() {
+    
+    
+    func testKelvinConversion2() {
         let value: Double = -50
         kelvinConverter.setTemperature(value: value)
-        celsiusExpectedValue = 273
-        fahrenheitExpectedValue = -460
+        celsiusExpectedValue = -323
+        fahrenheitExpectedValue = -550
         
         XCTAssertEqual(kelvinConverter.getCelsiusValue(), celsiusExpectedValue)
         XCTAssertEqual(kelvinConverter.getFahrenheitValue(), fahrenheitExpectedValue)
         XCTAssertEqual(kelvinConverter.getKelvinValue(), Int(value.rounded()))
     }
-    */
+    
     func testKelvinConversion3() {
         let value: Double = 273
         kelvinConverter.setTemperature(value: value)
