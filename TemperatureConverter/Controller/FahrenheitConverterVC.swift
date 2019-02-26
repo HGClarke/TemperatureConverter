@@ -19,7 +19,7 @@ class FahrenheitConverterVC: UIViewController {
         super.viewDidLoad()
         valueTxtField.textAlignment = .center
         valueTxtField.keyboardType = .decimalPad
-    
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -41,11 +41,32 @@ class FahrenheitConverterVC: UIViewController {
     
     fileprivate func convertValue(value: Double) {
       
-        let fahrenheitConverter = TemperatureConverter(temperatureType: .fahrenheit, value: value)
-        celsiusValueLbl.text = String(fahrenheitConverter.celsiusValue) + " ºC"
-        kelvinValueLbl.text = String(fahrenheitConverter.kelvinValue) + " K"
+        let fahrenheitConverter = TemperatureConverter(temperatureType: .fahrenheit)
+        fahrenheitConverter.setTemperature(value: value)
+        celsiusValueLbl.text = String(fahrenheitConverter.getCelsiusValue()) + " ºC"
+        kelvinValueLbl.text = String(fahrenheitConverter.getKelvinValue()) + " K"
 
     }
    
+    @IBAction func showKelvinConverter(_ sender: UIButton) {
+//        let segueIdentifier = "ShowKelvinConverter"
+//        self.performSegue(withIdentifier: segueIdentifier, sender: self)
 
+    }
+    
+    @IBAction func showCelsiusConverter(_ sender: Any) {
+//        let segueIdentifier = "ShowCelsiusConverter"
+//        self.performSegue(withIdentifier: segueIdentifier, sender: self)
+    }
+}
+
+extension UIViewController {
+    @objc func dismissKeyboardWhenTapped() {
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)),
+//        tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
+    }
+    func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 }
