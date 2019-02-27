@@ -9,24 +9,48 @@
 
 import UIKit
 
-class KelvinConverterVC: BaseVC {
+class KelvinConverterVC: UIViewController {
 
+    @IBOutlet var valueTxtField: UITextField!
+    @IBOutlet var fahrenheitValueLbl: UILabel!
+    @IBOutlet var celsiusValueLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print("Loaded Kevlin VC")
-        // Do any additional setup after loading the view.
+        
+        valueTxtField.textAlignment = .center
+        valueTxtField.keyboardType = .decimalPad
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        fahrenheitValueLbl.text = "0 ºF"
+        celsiusValueLbl.text = "0 ºC"
     }
-    */
 
+    @IBAction func convertBtnPressed(_ sender: UIButton) {
+        
+        if let text = valueTxtField.text {
+            if let value = Double(text) {
+                convertValue(value: value)
+            } else {
+                celsiusValueLbl.text = "Invalid Value"
+                fahrenheitValueLbl.text = "Invalid Value"
+            }
+        }
+        
+    }
+    @IBAction func fahrenheitConverterBtnPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    fileprivate func convertValue(value: Double) {
+        
+        let kelvinConverter = TemperatureConverter(temperatureType: .kelvin)
+        kelvinConverter.setTemperature(value: value)
+        fahrenheitValueLbl.text = String(kelvinConverter.getFahrenheitValue()) + " ºF"
+        celsiusValueLbl.text = String(kelvinConverter.getCelsiusValue()) + " ºC"
+        
+    }
 }
+
