@@ -22,7 +22,7 @@ class TemperatureConverter {
     private var temperatureValue: Double
    
     
-    public init(temperatureType: TemperatureType, value: Double) {
+    public init(temperatureType: TemperatureType) {
         self.temperatureType = temperatureType
         self.temperatureValue = value
     }

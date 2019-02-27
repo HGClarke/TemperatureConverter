@@ -23,6 +23,9 @@ class FahrenheitConverterVC: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        valueTxtField.text = ""
+        celsiusValueLbl.text = "0 ºC"
+        kelvinValueLbl.text = "0 K"
         
     }
     
