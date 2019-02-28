@@ -16,6 +16,17 @@ public enum TemperatureType {
     
 }
 
+struct Temperatures {
+    let celsius: Int
+    let fahrenheit: Int
+    let kelvin: Int
+    
+    init(celsius: Int, fahrenheit: Int, kelvin: Int) {
+        self.celsius = celsius
+        self.fahrenheit = fahrenheit
+        self.kelvin = kelvin
+    }
+}
 class TemperatureConverter {
     
     private var temperatureType: TemperatureType

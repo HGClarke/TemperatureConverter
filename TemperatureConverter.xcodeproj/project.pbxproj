@@ -7,29 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF265E2F222090CE00520DB7 /* KelvinConverterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF265E2E222090CE00520DB7 /* KelvinConverterVC.swift */; };
+		AF53FCD922233B9E0077202E /* FahrenheitConverterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53FCD822233B9E0077202E /* FahrenheitConverterVC.swift */; };
+		AF53FCDB22233BAC0077202E /* CelsiusConverterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53FCDA22233BAC0077202E /* CelsiusConverterVC.swift */; };
 		AF6F8457220A8F740056D38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8456220A8F740056D38E /* AppDelegate.swift */; };
-		AF6F8459220A8F740056D38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8458220A8F740056D38E /* ViewController.swift */; };
-		AF6F845C220A8F740056D38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F845A220A8F740056D38E /* Main.storyboard */; };
 		AF6F845E220A8F780056D38E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6F845D220A8F780056D38E /* Assets.xcassets */; };
 		AF6F8461220A8F780056D38E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6F845F220A8F780056D38E /* LaunchScreen.storyboard */; };
 		AF6F8469220A8FC30056D38E /* TemperatureConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F8468220A8FC30056D38E /* TemperatureConverter.swift */; };
-		AFAAC241220AB349004A9C1A /* Sample_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC240220AB349004A9C1A /* Sample_Unit_Tests.swift */; };
 		AFAAC246220AB351004A9C1A /* TemperatureConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAAC236220AB1AE004A9C1A /* TemperatureConverterTests.swift */; };
+		AFDC46AA2226D2630026FBCE /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDC46A92226D2630026FBCE /* ViewControllerExtensions.swift */; };
+		AFE0FE522220426C00F18D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE0FE512220426C00F18D6C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AF53FCE2222476360077202E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF6F844B220A8F730056D38E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF6F8452220A8F740056D38E;
+			remoteInfo = TemperatureConverter;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AF265E2E222090CE00520DB7 /* KelvinConverterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelvinConverterVC.swift; sourceTree = "<group>"; };
+		AF53FCD822233B9E0077202E /* FahrenheitConverterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FahrenheitConverterVC.swift; sourceTree = "<group>"; };
+		AF53FCDA22233BAC0077202E /* CelsiusConverterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelsiusConverterVC.swift; sourceTree = "<group>"; };
 		AF6F8453220A8F740056D38E /* TemperatureConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F8456220A8F740056D38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF6F8458220A8F740056D38E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF6F845B220A8F740056D38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF6F845D220A8F780056D38E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6F8460220A8F780056D38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF6F8462220A8F780056D38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF6F8468220A8FC30056D38E /* TemperatureConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverter.swift; sourceTree = "<group>"; };
 		AFAAC236220AB1AE004A9C1A /* TemperatureConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterTests.swift; sourceTree = "<group>"; };
 		AFAAC23E220AB349004A9C1A /* Sample Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFAAC240220AB349004A9C1A /* Sample_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_Unit_Tests.swift; sourceTree = "<group>"; };
 		AFAAC242220AB349004A9C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFDC46A92226D2630026FBCE /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		AFE0FE512220426C00F18D6C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +64,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF53FCDC22233BBE0077202E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F8468220A8FC30056D38E /* TemperatureConverter.swift */,
+				AF6F8456220A8F740056D38E /* AppDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF53FCDE22233BDB0077202E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF6F845F220A8F780056D38E /* LaunchScreen.storyboard */,
+				AFE0FE512220426C00F18D6C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF53FCDF22233BE30077202E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF265E2E222090CE00520DB7 /* KelvinConverterVC.swift */,
+				AF53FCD822233B9E0077202E /* FahrenheitConverterVC.swift */,
+				AF53FCDA22233BAC0077202E /* CelsiusConverterVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF53FCE42225B22D0077202E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFDC46A92226D2630026FBCE /* ViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AF6F844A220A8F730056D38E = {
 			isa = PBXGroup;
 			children = (
@@ -71,13 +121,11 @@
 		AF6F8455220A8F740056D38E /* TemperatureConverter */ = {
 			isa = PBXGroup;
 			children = (
-				AF6F8456220A8F740056D38E /* AppDelegate.swift */,
-				AF6F8458220A8F740056D38E /* ViewController.swift */,
-				AF6F845A220A8F740056D38E /* Main.storyboard */,
-				AF6F8468220A8FC30056D38E /* TemperatureConverter.swift */,
-				AFAAC236220AB1AE004A9C1A /* TemperatureConverterTests.swift */,
+				AF53FCE42225B22D0077202E /* Extensions */,
+				AF53FCDC22233BBE0077202E /* Model */,
+				AF53FCDE22233BDB0077202E /* View */,
+				AF53FCDF22233BE30077202E /* Controller */,
 				AF6F845D220A8F780056D38E /* Assets.xcassets */,
-				AF6F845F220A8F780056D38E /* LaunchScreen.storyboard */,
 				AF6F8462220A8F780056D38E /* Info.plist */,
 			);
 			path = TemperatureConverter;
@@ -86,7 +134,7 @@
 		AFAAC23F220AB349004A9C1A /* Sample Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				AFAAC240220AB349004A9C1A /* Sample_Unit_Tests.swift */,
+				AFAAC236220AB1AE004A9C1A /* TemperatureConverterTests.swift */,
 				AFAAC242220AB349004A9C1A /* Info.plist */,
 			);
 			path = "Sample Unit Tests";
@@ -123,6 +171,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				AF53FCE3222476360077202E /* PBXTargetDependency */,
 			);
 			name = "Sample Unit Tests";
 			productName = "Sample Unit Tests";
@@ -144,6 +193,7 @@
 					};
 					AFAAC23D220AB349004A9C1A = {
 						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AF6F8452220A8F740056D38E;
 					};
 				};
 			};
@@ -173,7 +223,7 @@
 			files = (
 				AF6F8461220A8F780056D38E /* LaunchScreen.storyboard in Resources */,
 				AF6F845E220A8F780056D38E /* Assets.xcassets in Resources */,
-				AF6F845C220A8F740056D38E /* Main.storyboard in Resources */,
+				AFE0FE522220426C00F18D6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,8 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF265E2F222090CE00520DB7 /* KelvinConverterVC.swift in Sources */,
 				AF6F8469220A8FC30056D38E /* TemperatureConverter.swift in Sources */,
-				AF6F8459220A8F740056D38E /* ViewController.swift in Sources */,
+				AF53FCD922233B9E0077202E /* FahrenheitConverterVC.swift in Sources */,
+				AF53FCDB22233BAC0077202E /* CelsiusConverterVC.swift in Sources */,
+				AFDC46AA2226D2630026FBCE /* ViewControllerExtensions.swift in Sources */,
 				AF6F8457220A8F740056D38E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,22 +254,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFAAC241220AB349004A9C1A /* Sample_Unit_Tests.swift in Sources */,
 				AFAAC246220AB351004A9C1A /* TemperatureConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		AF6F845A220A8F740056D38E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF6F845B220A8F740056D38E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		AF53FCE3222476360077202E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF6F8452220A8F740056D38E /* TemperatureConverter */;
+			targetProxy = AF53FCE2222476360077202E /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		AF6F845F220A8F780056D38E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -383,6 +435,7 @@
 		AFAAC244220AB349004A9C1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FS5ZF328E;
 				INFOPLIST_FILE = "Sample Unit Tests/Info.plist";
@@ -395,12 +448,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TemperatureConverter.app/TemperatureConverter";
 			};
 			name = Debug;
 		};
 		AFAAC245220AB349004A9C1A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9FS5ZF328E;
 				INFOPLIST_FILE = "Sample Unit Tests/Info.plist";
@@ -413,6 +468,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TemperatureConverter.app/TemperatureConverter";
 			};
 			name = Release;
 		};

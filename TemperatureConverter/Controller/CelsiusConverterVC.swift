@@ -17,40 +17,42 @@ class CelsiusConverterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTapped()
         valueTxtField.keyboardType = .decimalPad
         valueTxtField.textAlignment = .center
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        fahrenheitLbl.text = "0 ºF"
-        kelvinLbl.text = "0 K"
-//        self.dismissKeyboardWhenTapped()
-
-    }
+ 
     
     @IBAction func fahrenheitConvertBtnPressed(_ sender: UIButton) {
-        
-        self.dismiss(animated: true, completion: nil)
+      self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func convertBtnPressed(_ sender: UIButton) {
+        
+        /* Ensure that the textfield has values in it */
         if let text = valueTxtField.text {
+            /* Ensure that the value can be converted into a double */
             if let value = Double(text) {
-                convertValue(value: value)
+                /* Covnert the value and return the different temperature values
+                ** Then update the labels
+                */
+                let temperatures = convertValue(temperatureType: .celsius, value: value)
+                updateValueLabels(temperatures: temperatures)
+
             } else {
                 fahrenheitLbl.text = "Invalid Value"
                 kelvinLbl.text = "Invalid Value"
             }
         }
+        self.resignFirstResponder()
     }
     
-    fileprivate func convertValue(value: Double) {
-        
-        let celsiusConverter = TemperatureConverter(temperatureType: .celsius)
-        celsiusConverter.setTemperature(value: value)
-        fahrenheitLbl.text = String(celsiusConverter.getFahrenheitValue()) + " ºF"
-        kelvinLbl.text = String(celsiusConverter.getKelvinValue()) + " K"
-        
+    /* Updates the kelvin and farenheit ui labels */
+    fileprivate func updateValueLabels(temperatures: Temperatures) {
+        let fahrenheitValue = temperatures.fahrenheit
+        let kelvinValue = temperatures.kelvin
+        fahrenheitLbl.text = "\(fahrenheitValue) ºF"
+        kelvinLbl.text = "\(kelvinValue) K"
     }
 }

@@ -14,62 +14,43 @@ class FahrenheitConverterVC: UIViewController {
     @IBOutlet var celsiusValueLbl: UILabel!
     @IBOutlet var kelvinValueLbl: UILabel!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTapped() // allows us to dismiss keyboard when tapping screen
         valueTxtField.textAlignment = .center
         valueTxtField.keyboardType = .decimalPad
 
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        valueTxtField.text = ""
-        celsiusValueLbl.text = "0 ºC"
-        kelvinValueLbl.text = "0 K"
-        
-    }
-    
     
     @IBAction func convertBtnPressed(_ sender: UIButton) {
+        // Ensures text field is not empty
         if let text = valueTxtField.text {
+            // Ensures text can be converted
             if let value = Double(text) {
-                convertValue(value: value)
+                
+                let temperatures = convertValue(temperatureType: .fahrenheit, value: value)
+                updateValueLabels(temperatures: temperatures)
+                
             } else {
+//              If the text can't be converted to a value then
+//              Then  set the uilabels to invalid
                 celsiusValueLbl.text = "Invalid Value"
                 kelvinValueLbl.text = "Invalid Value"
+                print()
             }
         }
-    
+        
+        self.resignFirstResponder()
     }
-    
-    fileprivate func convertValue(value: Double) {
-      
-        let fahrenheitConverter = TemperatureConverter(temperatureType: .fahrenheit)
-        fahrenheitConverter.setTemperature(value: value)
-        celsiusValueLbl.text = String(fahrenheitConverter.getCelsiusValue()) + " ºC"
-        kelvinValueLbl.text = String(fahrenheitConverter.getKelvinValue()) + " K"
-
-    }
-   
-    @IBAction func showKelvinConverter(_ sender: UIButton) {
-//        let segueIdentifier = "ShowKelvinConverter"
-//        self.performSegue(withIdentifier: segueIdentifier, sender: self)
-
-    }
-    
-    @IBAction func showCelsiusConverter(_ sender: Any) {
-//        let segueIdentifier = "ShowCelsiusConverter"
-//        self.performSegue(withIdentifier: segueIdentifier, sender: self)
-    }
-}
-
-extension UIViewController {
-    @objc func dismissKeyboardWhenTapped() {
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)),
-//        tap.cancelsTouchesInView = false
-//        view.addGestureRecognizer(tap)
-    }
-    func dismissKeyboard() {
-        self.view.endEditing(true)
+//  Updates the labels
+    fileprivate func updateValueLabels(temperatures: Temperatures) {
+        
+        let celsiusValue = temperatures.celsius
+        let kelvinValue = temperatures.kelvin
+        celsiusValueLbl.text = "\(celsiusValue) ºC"
+        kelvinValueLbl.text = "\(kelvinValue) ºF"
+        
     }
 }

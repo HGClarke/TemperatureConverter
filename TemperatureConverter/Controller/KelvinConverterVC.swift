@@ -18,28 +18,27 @@ class KelvinConverterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTapped()
         valueTxtField.textAlignment = .center
         valueTxtField.keyboardType = .decimalPad
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        fahrenheitValueLbl.text = "0 ºF"
-        celsiusValueLbl.text = "0 ºC"
-    }
-
     @IBAction func convertBtnPressed(_ sender: UIButton) {
         
         if let text = valueTxtField.text {
             if let value = Double(text) {
-                convertValue(value: value)
+                let temperatures = convertValue(temperatureType: .kelvin, value: value)
+                updateValueLabels(temperatures: temperatures)
             } else {
                 celsiusValueLbl.text = "Invalid Value"
                 fahrenheitValueLbl.text = "Invalid Value"
             }
         }
+        self.resignFirstResponder()
         
     }
+    
     @IBAction func fahrenheitConverterBtnPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -52,5 +51,14 @@ class KelvinConverterVC: UIViewController {
         celsiusValueLbl.text = String(kelvinConverter.getCelsiusValue()) + " ºC"
         
     }
+    
+    fileprivate func updateValueLabels(temperatures: Temperatures) {
+        let celsiusValue = temperatures.celsius
+        let fahrenheitValue = temperatures.fahrenheit
+        
+        celsiusValueLbl.text = "\(celsiusValue) ºC"
+        fahrenheitValueLbl.text = "\(fahrenheitValue) ºF"
+    }
+    
 }
 
