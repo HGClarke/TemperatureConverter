@@ -10,21 +10,49 @@ import UIKit
 
 class CelsiusConverterVC: UIViewController {
 
+    @IBOutlet var valueTxtField: UITextField!
+    @IBOutlet var fahrenheitLbl: UILabel!
+    @IBOutlet var kelvinLbl: UILabel!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.hideKeyboardWhenTapped()
+        valueTxtField.keyboardType = .decimalPad
+        valueTxtField.textAlignment = .center
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+ 
+    
+    @IBAction func fahrenheitConvertBtnPressed(_ sender: UIButton) {
+      self.dismiss(animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func convertBtnPressed(_ sender: UIButton) {
+        
+        /* Ensure that the textfield has values in it */
+        if let text = valueTxtField.text {
+            /* Ensure that the value can be converted into a double */
+            if let value = Double(text) {
+                /* Covnert the value and return the different temperature values
+                ** Then update the labels
+                */
+                let temperatures = convertValue(temperatureType: .celsius, value: value)
+                updateValueLabels(temperatures: temperatures)
 
+            } else {
+                fahrenheitLbl.text = "Invalid Value"
+                kelvinLbl.text = "Invalid Value"
+            }
+        }
+        self.resignFirstResponder()
+    }
+    
+    /* Updates the kelvin and farenheit ui labels */
+    fileprivate func updateValueLabels(temperatures: Temperatures) {
+        let fahrenheitValue = temperatures.fahrenheit
+        let kelvinValue = temperatures.kelvin
+        fahrenheitLbl.text = "\(fahrenheitValue) ºF"
+        kelvinLbl.text = "\(kelvinValue) K"
+    }
 }

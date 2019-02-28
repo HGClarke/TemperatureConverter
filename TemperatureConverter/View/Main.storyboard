@@ -40,16 +40,43 @@
                                             <action selector="convertBtnPressed:" destination="TLJ-Yn-WXU" eventType="touchUpInside" id="qOB-P1-nXI"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiU-fh-Wjy">
+                                        <rect key="frame" x="20" y="20" width="89" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7Jv-px-rcf"/>
+                                            <constraint firstAttribute="width" constant="89" id="jMr-xp-WhO"/>
+                                        </constraints>
+                                        <state key="normal" title="ºC Converter"/>
+                                        <connections>
+                                            <segue destination="gn4-LC-q6a" kind="presentation" identifier="ShowFahrenheitConverter" id="INI-7J-HW3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIV-Do-gg6">
+                                        <rect key="frame" x="273" y="20" width="82" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="oH3-58-fRo"/>
+                                            <constraint firstAttribute="width" constant="82" id="oxE-17-RGA"/>
+                                        </constraints>
+                                        <state key="normal" title="K Converter"/>
+                                        <connections>
+                                            <action selector="showKelvinConverter:" destination="TLJ-Yn-WXU" eventType="touchUpInside" id="IVI-VB-00J"/>
+                                            <segue destination="RTK-ai-ehK" kind="presentation" identifier="ShowKelvinConverter" id="bNa-MG-81L"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="RiU-fh-Wjy" firstAttribute="leading" secondItem="YIt-hL-aRK" secondAttribute="leading" constant="20" id="76N-BZ-qcX"/>
                                     <constraint firstItem="Uq2-AD-VJc" firstAttribute="centerX" secondItem="K7a-SR-Ltw" secondAttribute="centerX" id="8eh-5J-oRl"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="12U-CK-WCO" secondAttribute="trailing" constant="10" id="B9h-Fl-dti"/>
                                     <constraint firstItem="K7a-SR-Ltw" firstAttribute="trailing" secondItem="12U-CK-WCO" secondAttribute="trailing" id="GJm-ne-uk5"/>
+                                    <constraint firstItem="RiU-fh-Wjy" firstAttribute="top" secondItem="YIt-hL-aRK" secondAttribute="top" constant="20" id="KLT-J0-vRl"/>
                                     <constraint firstItem="K7a-SR-Ltw" firstAttribute="leading" secondItem="12U-CK-WCO" secondAttribute="leading" id="aHn-Vk-0yv"/>
                                     <constraint firstItem="12U-CK-WCO" firstAttribute="leading" secondItem="YIt-hL-aRK" secondAttribute="leadingMargin" constant="12" id="cL6-MO-9zJ"/>
                                     <constraint firstAttribute="bottom" secondItem="Uq2-AD-VJc" secondAttribute="bottom" constant="30" id="kDM-u8-Vhf"/>
+                                    <constraint firstItem="NIV-Do-gg6" firstAttribute="top" secondItem="YIt-hL-aRK" secondAttribute="top" constant="20" id="lZs-e1-HlW"/>
                                     <constraint firstItem="K7a-SR-Ltw" firstAttribute="centerY" secondItem="YIt-hL-aRK" secondAttribute="centerY" id="t4n-bH-Sw7"/>
+                                    <constraint firstAttribute="trailing" secondItem="NIV-Do-gg6" secondAttribute="trailing" constant="20" id="wir-pw-ySa"/>
                                     <constraint firstItem="12U-CK-WCO" firstAttribute="top" secondItem="YIt-hL-aRK" secondAttribute="top" constant="55" id="zSH-py-Ru1"/>
                                     <constraint firstItem="K7a-SR-Ltw" firstAttribute="centerX" secondItem="12U-CK-WCO" secondAttribute="centerX" id="zuk-Nn-qho"/>
                                 </constraints>
@@ -69,7 +96,7 @@
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-vq-rRa">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-vq-rRa">
                                                         <rect key="frame" x="0.0" y="49" width="157" height="41"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -86,7 +113,7 @@
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnZ-dd-0fS">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnZ-dd-0fS">
                                                         <rect key="frame" x="0.0" y="49" width="207" height="41"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -125,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cs5-tE-7cO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="34" y="134"/>
         </scene>
         <!--Celsius ConverterVC-->
         <scene sceneID="tBH-e0-Pj2">
@@ -153,10 +180,26 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAN-2y-FHu">
                                         <rect key="frame" x="161" y="273.5" width="55" height="30"/>
                                         <state key="normal" title="Convert"/>
+                                        <connections>
+                                            <action selector="convertBtnPressed:" destination="gn4-LC-q6a" eventType="touchUpInside" id="vlh-8M-wZx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxY-6R-xTb">
+                                        <rect key="frame" x="268" y="20" width="87" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Snf-Ua-Mrj"/>
+                                            <constraint firstAttribute="width" constant="87" id="wwN-lJ-sRp"/>
+                                        </constraints>
+                                        <state key="normal" title="ºF Converter"/>
+                                        <connections>
+                                            <action selector="fahrenheitConvertBtnPressed:" destination="gn4-LC-q6a" eventType="touchUpInside" id="Le4-49-IyI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="lxY-6R-xTb" firstAttribute="top" secondItem="2GD-ly-PRl" secondAttribute="top" constant="20" id="6XW-8E-0X3"/>
+                                    <constraint firstAttribute="trailing" secondItem="lxY-6R-xTb" secondAttribute="trailing" constant="20" id="AO2-GQ-pRo"/>
                                     <constraint firstItem="f1b-QR-rmA" firstAttribute="trailing" secondItem="gEW-yQ-gpn" secondAttribute="trailing" id="I4O-ft-6UB"/>
                                     <constraint firstAttribute="bottom" secondItem="AAN-2y-FHu" secondAttribute="bottom" constant="30" id="PIb-QF-izp"/>
                                     <constraint firstItem="AAN-2y-FHu" firstAttribute="centerX" secondItem="f1b-QR-rmA" secondAttribute="centerX" id="WmW-T0-q7e"/>
@@ -183,7 +226,7 @@
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-1w-eDI">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spd-1w-eDI">
                                                         <rect key="frame" x="0.0" y="49" width="151.5" height="41"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -200,7 +243,7 @@
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELc-3T-40e">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 K" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELc-3T-40e">
                                                         <rect key="frame" x="0.0" y="49" width="207" height="41"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,22 +275,19 @@
                         <viewLayoutGuide key="safeArea" id="85k-NH-0iu"/>
                     </view>
                     <connections>
-                        <outlet property="firstConvertedValueLbl" destination="Spd-1w-eDI" id="JlK-XN-GC0"/>
-                        <outlet property="firstConvertedValueTitleLbl" destination="57Z-AN-ov2" id="bNd-xh-AWl"/>
-                        <outlet property="instructionLbl" destination="gEW-yQ-gpn" id="6tp-5b-dmY"/>
-                        <outlet property="secondConvertedValueLbl" destination="ELc-3T-40e" id="6aa-Fj-TtQ"/>
-                        <outlet property="secondConvertedValueTitleLbl" destination="DF0-JI-JGS" id="4HO-NJ-DSg"/>
-                        <outlet property="valueTextField" destination="f1b-QR-rmA" id="nLd-D7-aal"/>
+                        <outlet property="fahrenheitLbl" destination="Spd-1w-eDI" id="ZIU-tv-tqQ"/>
+                        <outlet property="kelvinLbl" destination="ELc-3T-40e" id="pWs-nH-cCW"/>
+                        <outlet property="valueTxtField" destination="f1b-QR-rmA" id="vpQ-2a-oTq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWc-Lz-Afr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-525" y="133"/>
+            <point key="canvasLocation" x="-958" y="134"/>
         </scene>
-        <!--Celsius ConverterVC-->
+        <!--Kelvin ConverterVC-->
         <scene sceneID="fHe-yL-UDl">
             <objects>
-                <viewController id="RTK-ai-ehK" customClass="CelsiusConverterVC" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RTK-ai-ehK" customClass="KelvinConverterVC" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WYz-In-hoo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,6 +310,20 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98n-JU-VW8">
                                         <rect key="frame" x="161" y="273.5" width="55" height="30"/>
                                         <state key="normal" title="Convert"/>
+                                        <connections>
+                                            <action selector="convertBtnPressed:" destination="RTK-ai-ehK" eventType="touchUpInside" id="urb-aM-XLq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vl-aZ-fYW">
+                                        <rect key="frame" x="20" y="20" width="87" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="c4u-Of-rvW"/>
+                                            <constraint firstAttribute="width" constant="87" id="pi0-wC-dKz"/>
+                                        </constraints>
+                                        <state key="normal" title="ºF Converter"/>
+                                        <connections>
+                                            <action selector="fahrenheitConverterBtnPressed:" destination="RTK-ai-ehK" eventType="touchUpInside" id="4V8-WA-r1z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -278,10 +332,12 @@
                                     <constraint firstItem="V3Q-PY-XxT" firstAttribute="top" secondItem="GeT-ce-bI2" secondAttribute="top" constant="55" id="4Xp-Dz-5F1"/>
                                     <constraint firstAttribute="bottom" secondItem="98n-JU-VW8" secondAttribute="bottom" constant="30" id="5g9-WH-AUH"/>
                                     <constraint firstItem="V3Q-PY-XxT" firstAttribute="leading" secondItem="GeT-ce-bI2" secondAttribute="leadingMargin" constant="12" id="IDK-cy-5Wx"/>
+                                    <constraint firstItem="9Vl-aZ-fYW" firstAttribute="top" secondItem="GeT-ce-bI2" secondAttribute="top" constant="20" id="Jdw-rL-GDT"/>
                                     <constraint firstItem="pTb-cm-6IE" firstAttribute="leading" secondItem="V3Q-PY-XxT" secondAttribute="leading" id="LKc-LE-6WE"/>
                                     <constraint firstItem="pTb-cm-6IE" firstAttribute="centerY" secondItem="GeT-ce-bI2" secondAttribute="centerY" id="U0H-ru-dGw"/>
                                     <constraint firstItem="pTb-cm-6IE" firstAttribute="centerX" secondItem="V3Q-PY-XxT" secondAttribute="centerX" id="jJ6-Uy-ka4"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="V3Q-PY-XxT" secondAttribute="trailing" constant="10" id="mXJ-33-WXc"/>
+                                    <constraint firstItem="9Vl-aZ-fYW" firstAttribute="leading" secondItem="GeT-ce-bI2" secondAttribute="leading" constant="20" id="utF-N7-Mmn"/>
                                     <constraint firstItem="pTb-cm-6IE" firstAttribute="trailing" secondItem="V3Q-PY-XxT" secondAttribute="trailing" id="xAV-Lw-ylf"/>
                                 </constraints>
                             </view>
@@ -300,7 +356,7 @@
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-8Y-WMs">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jf7-8Y-WMs">
                                                         <rect key="frame" x="0.0" y="49" width="151.5" height="41"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -317,7 +373,7 @@
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCH-05-29u">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCH-05-29u">
                                                         <rect key="frame" x="0.0" y="49" width="148" height="41"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                         <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -349,12 +405,9 @@
                         <viewLayoutGuide key="safeArea" id="Ytx-vr-kIy"/>
                     </view>
                     <connections>
-                        <outlet property="firstConvertedValueLbl" destination="jf7-8Y-WMs" id="5St-xU-phZ"/>
-                        <outlet property="firstConvertedValueTitleLbl" destination="9S6-sz-ORz" id="XCF-NJ-S4U"/>
-                        <outlet property="instructionLbl" destination="V3Q-PY-XxT" id="79n-SO-aEg"/>
-                        <outlet property="secondConvertedValueLbl" destination="bCH-05-29u" id="ZIf-57-vBD"/>
-                        <outlet property="secondConvertedValueTitleLbl" destination="VQm-nz-lBs" id="pUl-SM-u13"/>
-                        <outlet property="valueTextField" destination="pTb-cm-6IE" id="b7g-97-gYe"/>
+                        <outlet property="celsiusValueLbl" destination="bCH-05-29u" id="9aU-LR-LFR"/>
+                        <outlet property="fahrenheitValueLbl" destination="jf7-8Y-WMs" id="Po6-ii-1N7"/>
+                        <outlet property="valueTxtField" destination="pTb-cm-6IE" id="QSW-Uq-Z1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQe-Rw-A2t" userLabel="First Responder" sceneMemberID="firstResponder"/>

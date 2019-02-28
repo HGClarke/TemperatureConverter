@@ -16,6 +16,17 @@ public enum TemperatureType {
     
 }
 
+struct Temperatures {
+    let celsius: Int
+    let fahrenheit: Int
+    let kelvin: Int
+    
+    init(celsius: Int, fahrenheit: Int, kelvin: Int) {
+        self.celsius = celsius
+        self.fahrenheit = fahrenheit
+        self.kelvin = kelvin
+    }
+}
 class TemperatureConverter {
     
     private var temperatureType: TemperatureType
@@ -27,10 +38,12 @@ class TemperatureConverter {
         self.temperatureValue = 0;
     }
    
+    /* Set the temperature value */
     func setTemperature(value: Double) {
         temperatureValue = value
     }
     
+    /* Get the different temperature values */
     func getFahrenheitValue() -> Int {
         return fahrenheitValue
     }
@@ -39,10 +52,12 @@ class TemperatureConverter {
         return celsiusValue
     }
     
+    
     func getKelvinValue() -> Int {
         return kelvinValue
     }
     
+    /* Assign correct value based on the converter */
     private var fahrenheitValue: Int {
         var finalValue: Int
         
@@ -54,7 +69,7 @@ class TemperatureConverter {
             finalValue = convertTemperatureType(from: .kelvin, to: .fahrenheit, withValue: temperatureValue)
             break
         case .fahrenheit:
-            finalValue = Int(temperatureValue)
+            finalValue = Int(temperatureValue.rounded())
             break
         }
         
@@ -72,7 +87,7 @@ class TemperatureConverter {
             finalValue = convertTemperatureType(from: .kelvin, to: .celsius, withValue: temperatureValue)
             break
         case .celsius:
-            finalValue = Int(temperatureValue)
+            finalValue = Int(temperatureValue.rounded())
             break
         }
         
@@ -90,7 +105,7 @@ class TemperatureConverter {
             finalValue = convertTemperatureType(from: .fahrenheit, to: .kelvin, withValue: temperatureValue)
             break
         case .kelvin:
-            finalValue = Int(temperatureValue)
+            finalValue = Int(temperatureValue.rounded())
             break
             
         }
@@ -107,7 +122,7 @@ class TemperatureConverter {
     
     private func celsiusToKelvin(value: Double) -> Double {
         var finalValue: Double
-        finalValue = 273.15 + 32
+        finalValue = 273.15 + value
         return finalValue.rounded()
     }
     
